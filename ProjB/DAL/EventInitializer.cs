@@ -21,6 +21,16 @@ namespace ProjB.DAL
                 new Event{ Name = "Speed Dating", City = "Galway", Venue = "King's Head", Price = 30.00,StartTime="7.15" },
                 new Event{ Name = "Blind Date Night", City = "Athlone", Venue = "Rose's Place", Price = 30.00, StartTime="7.10" },
                 new Event{ Name = "an", City = "an", Venue = "an", Price = 30.00, StartTime="7.10" },
+                new Event{Name="Hozier",City="Dublin", Venue= "Sin E", Price = 40.00, StartTime="8.45"},
+                new Event{ Name = "The Beatles Tribute", City = "Cork", Venue = "Banana Tree", Price = 30.00,StartTime="7.00" },
+                new Event{ Name = "The Commitments",City = "Dublin", Venue = "The Olympia", Price = 55.00, StartTime="7.05" },
+                new Event{Name="Katie Taylor vs Joanna Jerdiyceck",City="Dublin", Venue= "The Palace", Price = 40.00, StartTime="8.00"},
+                new Event{ Name = "Queen ", City = "Cork", Venue = "The Gaiety", Price = 90.00,StartTime="7.45" },
+                new Event{Name="The Swiddles",City="Dublin", Venue= "The Globe", Price = 40.00, StartTime="8.45"},
+                new Event{ Name = "Party", City = "Cork", Venue = "The Village", Price = 25.00,StartTime="7.00" },
+                new Event{ Name = "Micky J",City = "Dublin", Venue = "Sugar Club", Price = 55.00, StartTime="7.05" },
+                new Event{Name="Dublin vs Mayo",City="Dublin", Venue= "BallyBoden", Price = 20.00, StartTime="6.00"},
+                new Event{ Name = "KnuckleHeads", City = "Cork", Venue = "The Dragon", Price = 45.00,StartTime="7.00" },
 
 
                         };
