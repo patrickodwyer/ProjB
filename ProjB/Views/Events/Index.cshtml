@@ -1,0 +1,93 @@
+﻿@model PagedList.IPagedList<ProjB.Models.Event>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Events";
+}
+
+
+
+
+<h2>Valentines Night Events - 14th February Dublin</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+
+
+
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.ActionLink(" Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+
+        <th>
+            City@*@Html.ActionLink("City", "Index", new { sortOrder = ViewBag.CitySortParm, currentFilter = ViewBag.CurrentFilter })*@
+        </th>
+        <th>
+            Venue
+        </th>
+        <th>
+            @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            Start Time
+        </th>
+        <th></th>
+    </tr>
+
+
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Venue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+      
+        <td>
+            @Html.ActionLink("Book Now", "Booking", new { id=item.EventID }) 
+          
+        </td>
+        <td>
+            @Html.ActionLink("Attendance", "About", new { id = item.EventID })
+
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.EventID }) |*@
+           
+            @*@Html.ActionLink("Delete", "Delete", new { id = item.EventID })*@
+        </td>
+    </tr>
+}
+
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+
+
+
