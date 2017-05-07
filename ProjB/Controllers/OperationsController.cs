@@ -6,16 +6,16 @@ using System.Net.Http;
 using System.Web.Http;
 using ProjB.DAL;
 using ProjB.Models;
-
+using System.Data.Entity;
 
 namespace ProjB.Controllers
 {
     public class OperationsController : ApiController
     {
         private EventContext db = new EventContext();
+        
 
-        // must have default constructor
-        // todo: use dependency injection and repository pattern
+        
 
         // GET api/events
         public IHttpActionResult GetAll()
@@ -27,7 +27,8 @@ namespace ProjB.Controllers
 
             else
             {
-                return Ok(db.Events.OrderByDescending(w => w.Name).ToList());       // 200 OK, listings serialized in response body 
+                db.Configuration.ProxyCreationEnabled = false;
+                return Ok(db.Events.OrderBy(s => s.Name).ToList());       // 200 OK, listings serialized in response body 
             }
         }
     }
