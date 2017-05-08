@@ -31,5 +31,7 @@ namespace ProjB.Controllers
                 return Ok(db.Events.OrderBy(s => s.Name).ToList());       // 200 OK, listings serialized in response body 
             }
         }
+
+        
     }
 }
