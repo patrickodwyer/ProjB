@@ -51,12 +51,12 @@ namespace ProjB.DAL
                 new Customer{CustomerID="GeoP@gmail.com",EventID=4},
                 new Customer{CustomerID="TerryP@gmail.com",EventID=1},
                 new Customer{CustomerID="KarenN@gmail.com",EventID=4},
-                new Customer{CustomerID="Lois123@gmail.com",EventID=1},
+                new Customer{CustomerID="Lois123@gmail.com",EventID=10},
                 new Customer{CustomerID="Sarah4321@gmail.com",EventID=2},
-                new Customer{CustomerID="Keara1234@gmail.com",EventID=3},
-                new Customer{CustomerID="Elias42@gmail.com",EventID=4},
-                new Customer{CustomerID="Steven0987@gmail.com",EventID=5},
-                new Customer{CustomerID="Gepp@gmail.com",EventID=4},
+                new Customer{CustomerID="Keara1234@gmail.com",EventID=7},
+                new Customer{CustomerID="Elias42@gmail.com",EventID=9},
+                new Customer{CustomerID="Steven0987@gmail.com",EventID=8},
+                new Customer{CustomerID="Gepp@gmail.com",EventID=8},
 
 
                         };
